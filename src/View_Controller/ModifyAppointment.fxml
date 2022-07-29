@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="637.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyAppointmentController">
+   <children>
+      <ComboBox fx:id="contactCb" layoutX="409.0" layoutY="66.0" prefWidth="150.0" />
+      <TextField fx:id="aptIdField" layoutX="159.0" layoutY="33.0" />
+      <TableView fx:id="appointmentsTableView" layoutX="16.0" layoutY="208.0" prefHeight="320.0" prefWidth="929.0">
+        <columns>
+          <TableColumn fx:id="aptIdCol" prefWidth="44.0" text="Apt ID" />
+          <TableColumn fx:id="aptTitleCol" prefWidth="92.0" text="Title" />
+            <TableColumn fx:id="aptDesCol" prefWidth="104.0" text="Description" />
+            <TableColumn fx:id="aptLocCol" prefWidth="107.0" text="Location" />
+            <TableColumn fx:id="aptContactCol" prefWidth="70.0" text="Contact" />
+            <TableColumn fx:id="aptTypeCol" prefWidth="119.0" text="Type" />
+            <TableColumn fx:id="aptStartCol" prefWidth="138.0" text="Start Date/Time" />
+            <TableColumn fx:id="aptEndCol" prefWidth="121.0" text="End Date/Time" />
+            <TableColumn fx:id="aptCusIdCol" prefWidth="85.0" text="Customer ID" />
+            <TableColumn fx:id="aptUserIdCol" prefWidth="47.0" text="User ID" />
+        </columns>
+      </TableView>
+      <TextField fx:id="titleField" layoutX="159.0" layoutY="66.0" />
+      <TextField fx:id="desField" layoutX="159.0" layoutY="102.0" />
+      <Label fx:id="aptIDLbl" layoutX="47.0" layoutY="37.0" text="Appointment ID" />
+      <Label fx:id="titleLbl" layoutX="47.0" layoutY="70.0" text="Title" />
+      <Label layoutX="45.0" layoutY="106.0" text="Description" />
+      <Label fx:id="locLbl" layoutX="341.0" layoutY="38.0" text="Location" />
+      <TextField fx:id="locField" layoutX="409.0" layoutY="34.0" />
+      <Label fx:id="contactLbl" layoutX="341.0" layoutY="70.0" text="Contact" />
+      <Label fx:id="typeLbl" layoutX="341.0" layoutY="106.0" text="Type" />
+      <TextField fx:id="typeField" layoutX="410.0" layoutY="102.0" />
+      <Label fx:id="startDateLbl" layoutX="592.0" layoutY="37.0" text="Start Date" />
+      <Label fx:id="startTimeLbl" layoutX="591.0" layoutY="70.0" text="Start Time" />
+      <Label fx:id="endTimeLbl" layoutX="591.0" layoutY="139.0" text="End Time" />
+      <DatePicker fx:id="startDatePicker" layoutX="650.0" layoutY="34.0" />
+      <ComboBox fx:id="startTimeCb" layoutX="650.0" layoutY="66.0" prefWidth="150.0" />
+      <ComboBox fx:id="endTimeCb" layoutX="650.0" layoutY="135.0" prefWidth="150.0" />
+      <Label fx:id="cusIdLbl" layoutX="106.0" layoutY="160.0" text="Customer ID" />
+      <Label fx:id="userIdLbl" layoutX="347.0" layoutY="160.0" text="User ID" />
+      <TextField fx:id="cusIdField" layoutX="179.0" layoutY="156.0" />
+      <TextField fx:id="userIdField" layoutX="392.0" layoutY="156.0" />
+      <Button fx:id="saveAptBtn" layoutX="44.0" layoutY="156.0" mnemonicParsing="false" onAction="#onActionSave" text="Save" />
+      <DatePicker fx:id="endDatePicker" layoutX="650.0" layoutY="102.0" />
+      <Label fx:id="endDateLbl" layoutX="591.0" layoutY="106.0" text="End Date" />
+      <Button fx:id="returnBtn" layoutX="774.0" layoutY="564.0" mnemonicParsing="false" onAction="#onActionReturn" text="Return" />
+      <Button fx:id="modBtn" layoutX="705.0" layoutY="169.0" mnemonicParsing="false" onAction="#onActionMod" text="Modify" />
+      <Button fx:id="deleteBtn" layoutX="774.0" layoutY="169.0" mnemonicParsing="false" onAction="#onActionDelete" text="Delete" />
+   </children>
+</AnchorPane>

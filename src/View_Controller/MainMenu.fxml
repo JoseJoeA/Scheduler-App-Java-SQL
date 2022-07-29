@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="610.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainMenuController">
+   <children>
+      <Label layoutX="330.0" layoutY="33.0" text="Schedule Appointment">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="calendarTableView" layoutX="11.0" layoutY="87.0" prefHeight="265.0" prefWidth="931.0">
+        <columns>
+          <TableColumn fx:id="aptIdCol" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="aptTitleCol" prefWidth="93.0" text="Title" />
+            <TableColumn fx:id="aptDesCol" prefWidth="134.0" text="Description" />
+            <TableColumn fx:id="aptLocCol" prefWidth="101.0" text="Location" />
+            <TableColumn fx:id="aptContactCol" prefWidth="115.0" text="Contact" />
+            <TableColumn fx:id="aptTypeCol" prefWidth="97.0" text="Type" />
+            <TableColumn fx:id="aptStartCol" prefWidth="118.0" text="Start Date/Time" />
+            <TableColumn fx:id="aptEndCol" prefWidth="134.0" text="End Date/Time" />
+            <TableColumn fx:id="aptCusIdCol" prefWidth="101.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="38.0" layoutY="397.0" mnemonicParsing="false" onAction="#onActionAddCus" prefHeight="25.0" prefWidth="129.0" text="Add Customer" />
+      <Button layoutX="38.0" layoutY="438.0" mnemonicParsing="false" onAction="#onActionModCus" prefHeight="25.0" prefWidth="129.0" text="Modify Customer" />
+      <Button layoutX="38.0" layoutY="481.0" mnemonicParsing="false" onAction="#onActionAddApt" prefHeight="25.0" prefWidth="129.0" text="Add Appointment" />
+      <Button layoutX="38.0" layoutY="521.0" mnemonicParsing="false" onAction="#onActionModApt" prefHeight="25.0" prefWidth="129.0" text="Modify Appointment" />
+      <Button layoutX="38.0" layoutY="560.0" mnemonicParsing="false" onAction="#onActionReport" prefHeight="25.0" prefWidth="129.0" text="Create Reports" />
+      <RadioButton fx:id="allRadioBtn" layoutX="697.0" layoutY="356.0" mnemonicParsing="false" onAction="#onActionViewAllRadio" selected="true" text="All Apts">
+         <toggleGroup>
+            <ToggleGroup fx:id="calendarGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="monthRadioBtn" layoutX="767.0" layoutY="356.0" mnemonicParsing="false" onAction="#onActionViewMonthlyRadio" text="Month Apts" toggleGroup="$calendarGroup" />
+      <RadioButton fx:id="weekRadioBtn" layoutX="858.0" layoutY="356.0" mnemonicParsing="false" onAction="#onActionViewWeeklyRadio" text="Week Apts" toggleGroup="$calendarGroup" />
+      <DatePicker fx:id="calendarDatePicker" layoutX="515.0" layoutY="351.0" onAction="#onActionDateSelected" />
+      <TextField fx:id="searchTextField" layoutX="75.0" layoutY="39.0" promptText="Title or Description" />
+      <Label layoutX="31.0" layoutY="43.0" text="Search" />
+      <Label layoutX="180.0" layoutY="401.0" text="Allows you to add new customers into the the database." />
+      <Label layoutX="180.0" layoutY="442.0" text="Allows you to modify existing or newly added customers into the database." />
+      <Label layoutX="180.0" layoutY="485.0" text="Allows you to add new scheduled appointments for your customers." />
+      <Label layoutX="180.0" layoutY="525.0" text="Allows you to modify pre-existing appointments or newly added appointment to the database." />
+      <Label layoutX="180.0" layoutY="564.0" text="Allows you to view and create reports on database information." />
+      <Label layoutX="11.0" layoutY="346.0" prefHeight="36.0" prefWidth="501.0" text="Select a date and view appointments either monthly or weekly or search with all appointments" />
+   </children>
+</AnchorPane>
